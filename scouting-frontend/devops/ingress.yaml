@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "65536m"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+
+  name: scouting-vue
+  namespace: spyderweb
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - scouting.metalspork.xyz
+        - scouting.teamspyder.science
+      secretName: scouting-vue-tls
+  rules:
+    - host: scouting.teamspyder.science
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: scouting-vue
+                port:
+                  number: 8080
+    - host: scouting.metalspork.xyz
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: scouting-vue
+                port:
+                  number: 8080
+

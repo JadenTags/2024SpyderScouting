@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vueContainer {
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #181818;
+}
+
+.btn {
+  color: white;
+  max-height: 60px;
+  height: 8vw;
+  min-height: 60px;
+  max-width: 200px;
+  width: 20vw;
+  min-width: 100px;
+  font-size: max(min(2vw, 20px), 10px);
+  background-color: #353535;
+  margin: auto;
+  margin-top: min(max(2vw, 20px), 40px);
+  margin-bottom: min(max(2vw, 20px), 40px);
+  padding: 0;
+}
+
+.formInput {
+  color: white;
+}
+
+.notes {
+  color: white;
+  width: 80%;
+  margin: auto;
+}
+
+.sectionTitle {
+  font-size: min(10vw, 50px);
+  margin-left: auto;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+  font-size: min(5vw, 60px);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  margin-top: 30px;
+}
+
+.scoreTitle {
+  font-size: min(5vw, 60px);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-size: min(3vw, 40px);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  margin-top: 30px;
+}
+
+.buttonGroup {
+  min-height: min(max(6vw, 20px), 60px);
+}
+
+.groupedButton {
+  background-color: #353535;
+  color: white;
+  min-height: min(max(6vw, 20px), 60px);
+  min-width: 60px;
+  width: 18vw;
+  max-width: 200px;
+  font-size: min(2.5vw, 30px);
+}

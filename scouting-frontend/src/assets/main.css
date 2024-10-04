@@ -1,0 +1,53 @@
+@import "./tailwind.css";
+@import "./base.css";
+
+a,
+.green {
+	text-decoration: none;
+	color: hsla(160, 100%, 37%, 1);
+	transition: 0.4s;
+}
+
+@media (hover: hover) {
+	a:hover {
+		background-color: hsla(160, 100%, 37%, 0.2);
+	}
+}
+
+@media (min-width) {
+	body {
+		display: flex;
+		place-items: center;
+	}
+
+	#app {
+		display: grid;
+		/* grid-template-columns: 1fr 1fr; */
+		padding: 0 2rem;
+	}
+}
+
+@font-face {
+    font-family: 'utendo';
+    src: url('./fonts/utendo/Utendo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'kanit';
+	src: url('./fonts/kanit/Kanit-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'kanit-light';
+	src: url('./fonts/kanit/Kanit-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'arvo-bold';
+	src: url('./fonts/Arvo/Arvo-BoldItalic.ttf') format('truetype');
+}
+
+.errorText {
+	color: #e99090;
+	margin-bottom: 2vw;
+  }
